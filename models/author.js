@@ -1,4 +1,5 @@
 const mongose = require('mongoose');
+
 const Schema = mongose.Schema;
 
 //Creating the Author Schema
