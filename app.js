@@ -11,11 +11,11 @@ const app = express();
 
 //Setting up mongose connection
 const mongose = require('mongoose');
-const mongoDB = 'mongodb+srv://domingosfranco:1914watch@cluster0.1tzwe.mongodb.net/my_library?retryWrites=true&w=majority';
+const mongoDB = 'mongodb+srv://domingosfranco:1914Watch@cluster0.1tzwe.mongodb.net/my_library?retryWrites=true&w=majority';
 
 mongose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 const db =mongose.connection;
-db.on('error', console.error(console, 'MongoDB connection error'));
+db.on('error', console.error.bind(console, 'MongoDB connection error'));
 
 
 // view engine setup
