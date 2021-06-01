@@ -10,11 +10,11 @@ const usersRouter = require('./routes/users');
 const app = express();
 
 //Setting up mongose connection
-const mongose = require('mongoose');
-const mongoDB = 'mongodb+srv://domingosfranco:1914Watch@cluster0.1tzwe.mongodb.net/my_library?retryWrites=true&w=majority';
+const mongoose = require('mongoose');
+const mongoDB = 'mongodb+srv://admin:1234watch@library.byib3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
-mongose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
-const db =mongose.connection;
+mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
+const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error'));
 
 
